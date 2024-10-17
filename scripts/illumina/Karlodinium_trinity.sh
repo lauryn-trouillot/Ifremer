@@ -12,7 +12,7 @@ cd ${PBS_O_WORKDIR}
 
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="Karlodinium_trinity"
-CHEMIN="/home1/datawork/ltrouill/"
+CHEMIN="/home1/datawork/ltrouill/ifremer/"
 LOG_FOLDER="${CHEMIN}/errors"
 
 mkdir -p $LOG_FOLDER
