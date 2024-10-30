@@ -1,0 +1,152 @@
+
+
+     ______  ____   ____  ____   ____  ______  __ __
+    |      ||    \ |    ||    \ |    ||      ||  |  |
+    |      ||  D  ) |  | |  _  | |  | |      ||  |  |
+    |_|  |_||    /  |  | |  |  | |  | |_|  |_||  ~  |
+      |  |  |    \  |  | |  |  | |  |   |  |  |___, |
+      |  |  |  .  \ |  | |  |  | |  |   |  |  |     |
+      |__|  |__|\_||____||__|__||____|  |__|  |____/
+
+    Trinity-v2.8.5
+
+
+
+Left read files: $VAR1 = [
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R1.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R1.fastq.gz'
+        ];
+Right read files: $VAR1 = [
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R2.fastq.gz',
+          '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R2.fastq.gz'
+        ];
+Trinity version: Trinity-v2.8.5
+-ERROR: couldn't run the network check to confirm latest Trinity software version.
+
+Monday, October 21, 2024: 06:46:35	CMD: java -Xmx64m -XX:ParallelGCThreads=2  -jar /appli/conda-env/bioinfo/trinity-2.8.5/opt/trinity-2.8.5/util/support_scripts/ExitTester.jar 0
+Monday, October 21, 2024: 06:46:35	CMD: java -Xmx4g -XX:ParallelGCThreads=2  -jar /appli/conda-env/bioinfo/trinity-2.8.5/opt/trinity-2.8.5/util/support_scripts/ExitTester.jar 1
+
+
+----------------------------------------------------------------------------------
+-------------- Trinity Phase 1: Clustering of RNA-Seq Reads  ---------------------
+----------------------------------------------------------------------------------
+
+---------------------------------------------------------------
+------------ In silico Read Normalization ---------------------
+-- (Removing Excess Reads Beyond 200 Coverage --
+---------------------------------------------------------------
+
+# running normalization on reads: $VAR1 = [
+          [
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R1.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R1.fastq.gz'
+          ],
+          [
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R2.fastq.gz',
+            '/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R2.fastq.gz'
+          ]
+        ];
+
+
+Monday, October 21, 2024: 06:46:35	CMD: /appli/conda-env/bioinfo/trinity-2.8.5/opt/trinity-2.8.5/util/insilico_read_normalization.pl --seqType fq --JM 280G  --max_cov 200 --min_cov 1 --CPU 20 --output /home1/datawork/ltrouill/ifremer/results/illumina/Karlodinium_trinity/insilico_read_normalization --max_CV 10000  --left /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R1.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R1.fastq.gz --right /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R2.fastq.gz,/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R2.fastq.gz --pairs_together --PARALLEL_STATS  
+-prepping seqs
+Converting input files. (both directions in parallel)left file exists, nothing to doright file exists, nothing to doDone converting input files.-kmer counting.
+-generating stats files
+-defining normalized reads
+CMD: /appli/conda-env/bioinfo/trinity-2.8.5/opt/trinity-2.8.5/util/..//util/support_scripts//nbkc_merge_left_right_stats.pl --left left.fa.K25.stats.sort --right right.fa.K25.stats.sort --sorted > pairs.K25.stats
+-opening left.fa.K25.stats.sort
+-opening right.fa.K25.stats.sort
+-done opening files.
+CMD finished (10909 seconds)
+CMD: touch pairs.K25.stats.ok
+CMD finished (0 seconds)
+CMD: /appli/conda-env/bioinfo/trinity-2.8.5/opt/trinity-2.8.5/util/..//util/support_scripts//nbkc_normalize.pl --stats_file pairs.K25.stats --max_cov 200  --min_cov 1 --max_CV 10000 > pairs.K25.stats.C200.maxCV10000.accs
+136071516 / 707257893 = 19.24% reads selected during normalization.
+0 / 707257893 = 0.00% reads discarded as likely aberrant based on coverage profiles.
+0 / 707257893 = 0.00% reads discarded as below minimum coverage threshold=1
+CMD finished (6599 seconds)
+CMD: touch pairs.K25.stats.C200.maxCV10000.accs.ok
+CMD finished (1 seconds)
+-search and capture.
+-preparing to extract selected reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R1.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R1.fastq.gz ... done prepping, now search and capture.
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R1.fastq.gz
+-preparing to extract selected reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/18_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/1_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/2_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/3_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/4_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/5_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/6_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/7_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/8_R2.fastq.gz /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/9_R2.fastq.gz ... done prepping, now search and capture.
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/10_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/11_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/12_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/13_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/14_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/15_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/16_R2.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R1.fastq.gz
+-capturing normalized reads from: /home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Karlodinium_karmit/17_R2.fastq.gz
