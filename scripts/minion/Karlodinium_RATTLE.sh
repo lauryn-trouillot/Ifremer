@@ -145,6 +145,7 @@ else
     fi
 fi
 
+. /appli/bioinfo/rattle/1.0.0/delenv.sh
 
 # Compression des résultats
 if [ -f "$ARCHIVE_NAME" ]; then
