@@ -10,27 +10,27 @@ cd "${PBS_O_WORKDIR}"
 
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-ASSEMBLY="RATTLE"
+ASSEMBLY="Trinity"
 NAME="BUSCO_${ASSEMBLY}_${TIMESTAMP}"
 CHEMIN="/home1/datawork/ltrouill/ifremer/"
-ARCHIVE="${CHEMIN}results/minion/result_RATTLE.tar.gz"
-SEQ_FILE="${CHEMIN}results/minion/transcriptome.fq"
+ARCHIVE="${CHEMIN}results/illumina/result_Trinity.tar.gz"
+SEQ_FILE="${CHEMIN}results/illumina/Trinity_20250108/Karlodinium_trinity_20250106_143432.Trinity.fasta"
 LOG_FOLDER="${CHEMIN}errors/BUSCO_errors/"
 RESULT_FOLDER="${CHEMIN}results/BUSCO/${NAME}"  # Répertoire de résultats
 DB_FOLDER="${CHEMIN}data/busco_downloads/lineages/eukaryota_odb10"
-FASTQ=true  # Mettre à true si le fichier d'entrée est au format FASTQ
+FASTQ=False  # Mettre à true si le fichier d'entrée est au format FASTQ
 
 # Création des dossiers
 mkdir -p "${RESULT_FOLDER}"
 mkdir -p "${LOG_FOLDER}"
 
 # Extraction du fichier spécifique
-echo "Extraction de ${SEQ_FILE} depuis ${ARCHIVE}..."
-tar -xzf "${ARCHIVE}" -C "$(dirname "${SEQ_FILE}")" ./transcriptome.fq
-if [[ ! -f "${SEQ_FILE}" ]]; then
-    echo "Erreur : fichier ${SEQ_FILE} introuvable après extraction." >&2
-    exit 1
-fi
+# echo "Extraction de ${SEQ_FILE} depuis ${ARCHIVE}..."
+# tar -xzf "${ARCHIVE}" -C "$(dirname "${SEQ_FILE}")" ./transcriptome.fq
+# if [[ ! -f "${SEQ_FILE}" ]]; then
+#     echo "Erreur : fichier ${SEQ_FILE} introuvable après extraction." >&2
+#     exit 1
+# fi
 
 # Conversion FASTQ → FASTA si nécessaire
 if $FASTQ; then
