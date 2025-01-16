@@ -5,8 +5,11 @@
 #PBS -l mem=40gb
 #PBS -l walltime=72:00:00
 
+# Chargement de l'environnement de travail
+cd "${PBS_O_WORKDIR}"
+
 # Initialiser les dossiers pour les logs et les sorties
-CHEMIN="/home1/datawork/ltrouill/ifremer/"  # Base path to data
+CHEMIN="/home1/datawork/ltrouill/ifremer/"
 LOG_FOLDER="${CHEMIN}errors/bowtie2"
 OUTPUT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
 
@@ -20,12 +23,9 @@ LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 # Indiquer le début du log
 echo "=== Début du script: $(date) ===" >"$LOGFILE"
 
-# Chargement de l'environnement de travail
-cd "${PBS_O_WORKDIR}"
-
 # Variables
-FILENAME="${CHEMIN}results/illumina/Trinity_20250108/Karlodinium_trinity_20250106_143432.Trinity.fasta"
-EXCLUDE="2|5|8|13|14|18"
+FILENAME="${CHEMIN}results/illumina/Trinity_20250106/Karlodinium_trinity_20250106_143432.Trinity.fasta"
+EXCLUDE="1|3|4|6|7|9|10|11|16|17" # 2|5|8|13|14|18
 
 # Création des listes de fichiers de lecture
 echo "Création des listes de fichiers de lecture..." >>"$LOGFILE"
@@ -43,6 +43,19 @@ if [ ! -f "$FILENAME" ]; then
 fi
 echo "Fichier transcriptome trouvé : $FILENAME" >>"$LOGFILE"
 
+# Détection du format de fichier
+EXTENSION="${FILENAME##*.}"
+if [[ "$EXTENSION" == "fasta" || "$EXTENSION" == "fa" ]]; then
+    ALIGNMENT_OPTION="-f"
+    echo "Format détecté : FASTA. Utilisation de l'option -f pour Bowtie2." >>"$LOGFILE"
+elif [[ "$EXTENSION" == "fastq" || "$EXTENSION" == "fq" ]]; then
+    ALIGNMENT_OPTION="-q"
+    echo "Format détecté : FASTQ. Utilisation de l'option -q pour Bowtie2." >>"$LOGFILE"
+else
+    echo "Erreur : Format de fichier non reconnu. Extension détectée : $EXTENSION" >>"$LOGFILE"
+    exit 1
+fi
+
 # Chargement des modules Bowtie2
 echo "Chargement de l'environnement Bowtie2..." >>"$LOGFILE"
 . /appli/bioinfo/bowtie2/2.5.4/env.sh
@@ -56,7 +69,7 @@ echo " ------------ Construction terminé ----------" >>"$LOGFILE"
 
 # Alignement des lectures
 echo "---------- Début de l'alignement Bowtie2 ----------" >>"$LOGFILE"
-bowtie2 -p 15 -q --no-unal -k 20 -x "$INDEX_PREFIX" -1 "$LEFT_READS" -2 "$RIGHT_READS" \
+bowtie2 -p 15 $ALIGNMENT_OPTION -k 20 -x "$INDEX_PREFIX" -1 "$LEFT_READS" -2 "$RIGHT_READS" \
     2>"${OUTPUT_FOLDER}/align_stats.txt"
 
 # Afficher les statistiques d'alignement
