@@ -10,11 +10,11 @@ cd "${PBS_O_WORKDIR}"
 
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-ASSEMBLY="Trinity"
+ASSEMBLY="rnaSPADES"
 NAME="BUSCO_${ASSEMBLY}_${TIMESTAMP}"
 CHEMIN="/home1/datawork/ltrouill/ifremer/"
-ARCHIVE="${CHEMIN}results/illumina/result_Trinity.tar.gz"
-SEQ_FILE="${CHEMIN}results/illumina/Trinity_20250108/Karlodinium_trinity_20250106_143432.Trinity.fasta"
+ARCHIVE="${CHEMIN}results/illumina/result_rnaSPADES.tar.gz"
+SEQ_FILE="${CHEMIN}results/illumina_minion/rnaSPADES/Karlodinium_rnaspade_20250110_155148/transcripts.fasta"
 LOG_FOLDER="${CHEMIN}errors/BUSCO_errors/"
 RESULT_FOLDER="${CHEMIN}results/BUSCO/${NAME}"  # Répertoire de résultats
 DB_FOLDER="${CHEMIN}data/busco_downloads/lineages/eukaryota_odb10"
