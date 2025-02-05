@@ -23,8 +23,12 @@ LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 # Indiquer le début du log
 echo "=== Début du script: $(date) ===" >"$LOGFILE"
 
+gunzip "${CHEMIN}data/rawdata/illumina/Karlodinium_bib.fasta.gz" 
+
+echo " ------------ Decompression du fichier ------------ " >"$LOGFILE"
+
 # Variables
-FILENAME="${CHEMIN}results/illumina_minion/rnaSPADES/Karlodinium_rnaspade_20250110_155148/transcripts_R.fasta"
+FILENAME="${CHEMIN}data/rawdata/illumina/Karlodinium_bib.fasta"
 EXCLUDE="2|5|8|13|14|18" #"1|3|4|6|7|9|10|11|16|17"
 
 # Création des listes de fichiers de lecture
@@ -51,19 +55,19 @@ echo "Chargement de l'environnement Bowtie2..." >>"$LOGFILE"
 . /appli/bioinfo/bowtie2/2.5.4/env.sh
 
 # Construction de l'index Bowtie2
-echo " ------------ Construction de l'index Bowtie2 ----------" >>"$LOGFILE"
+echo " ------------ Construction de l'index Bowtie2 ---------- " >>"$LOGFILE"
 INDEX_PREFIX="${OUTPUT_FOLDER}/rnaSPADES_index"
 bowtie2-build "$FILENAME" "$INDEX_PREFIX"
 
-echo " ------------ Construction terminé ----------" >>"$LOGFILE"
+echo " ------------ Construction terminé ---------- " >>"$LOGFILE"
 
 # Alignement des lectures
-echo "---------- Début de l'alignement Bowtie2 ----------" >>"$LOGFILE"
+echo "---------- Début de l'alignement Bowtie2 ---------- " >>"$LOGFILE"
 bowtie2 -p 15 --no-unal -q -k 20 -x "$INDEX_PREFIX" -1 "$LEFT_READS" -2 "$RIGHT_READS" \
     2>"${OUTPUT_FOLDER}/align_stats.txt"
 
 # Afficher les statistiques d'alignement
-echo " ---------- Statistiques d'alignement ----------" >>"$LOGFILE"
+echo " ---------- Statistiques d'alignement ---------- " >>"$LOGFILE"
 cat "${OUTPUT_FOLDER}/align_stats.txt" >>"$LOGFILE"
 
 # Indiquer la fin du script
