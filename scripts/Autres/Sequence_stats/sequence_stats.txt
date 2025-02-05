@@ -1,0 +1,60 @@
+Statistiques du fichier rnabloom.transcripts.fasta : 
+Nombre de reads : 43126
+Longueur maximale : 119958 >rb_35738 l=119958 c=5.5915823 s=40110
+Longueur minimale : 200 >rb_1016 l=200 c=4.0 s=1200
+Longueur moyenne : 740
+Nombre de A : 8483643 (26.00%)
+Nombre de T : 8121354 (25.00%)
+Nombre de C : 7448325 (23.00%)
+Nombre de G : 7861295 (24.00%)
+Pourcentage de GC : 47.00%
+Statistiques du fichier rnabloom.transcripts.fasta : 
+Nombre de reads : 12428
+Longueur maximale : 543140 >rb_1 l=543140 c=5.540053 s=3
+Longueur minimale : 200 >rb_543 l=200 c=3.0 s=609
+Longueur moyenne : 808
+Nombre de A : 2960956 (29.00%)
+Nombre de T : 2490612 (24.00%)
+Nombre de C : 1858014 (18.00%)
+Nombre de G : 2738017 (27.00%)
+Pourcentage de GC : 45.00%
+Statistiques du fichier transcripts.fasta : 
+Nombre de reads : 638297
+Longueur maximale : 1279086 >NODE_1_length_1279086_cov_506.785924_g0_i0
+Longueur minimale : 80 >NODE_638297_length_80_cov_2.594771_g596072_i0
+Longueur moyenne : 716
+Nombre de A : 111816639 (24.00%)
+Nombre de T : 116523900 (25.00%)
+Nombre de C : 114323056 (24.00%)
+Nombre de G : 114643861 (25.00%)
+Pourcentage de GC : 50.00%
+Statistiques du fichier Karlodinium_trinity_20250106_143432.Trinity.fasta : 
+Nombre de reads : 639081
+Longueur maximale : 52209 >TRINITY_DN30779_c0_g1_i26 len=52209 path=[8:0-3691 11:3692-3719 13:3720-6736 15:6737-6760 16:6761-8077 18:8078-8101 20:8102-9817 22:9818-9843 26:9844-14821 27:14822-14845 28:14846-15496 30:15497-20507 32:20508-21859 34:21860-21862 35:21863-21886 37:21887-31326 39:31327-31328 40:31329-31647 41:31648-31648 42:31649-32224 43:32225-33248 45:33249-45591 46:45592-46127 48:46128-47632 50:47633-52208]
+Longueur minimale : 175 >TRINITY_DN95653_c0_g1_i5 len=175 path=[0:0-27 1:28-32 2:33-37 4:38-50 6:51-52 7:53-174]
+Longueur moyenne : 783
+Nombre de A : 128428230 (25.00%)
+Nombre de T : 128681323 (25.00%)
+Nombre de C : 122959374 (24.00%)
+Nombre de G : 120512236 (24.00%)
+Pourcentage de GC : 48.00%
+Statistiques du fichier Karlodinium_trinity_20241128_225603.Trinity.fasta : 
+Nombre de reads : 615933
+Longueur maximale : 91707 >TRINITY_DN36394_c1_g1_i4 len=91707 path=[3:0-23343 5:23344-23369 7:23370-34033 8:34034-35385 10:35386-35388 13:35389-35412 15:35413-45173 16:45174-45174 17:45175-45750 18:45751-53693 20:53694-72837 22:72838-91624 24:91625-91706]
+Longueur minimale : 176 >TRINITY_DN52714_c0_g1_i3 len=176 path=[1:0-49 3:50-50 6:51-163 7:164-175]
+Longueur moyenne : 764
+Nombre de A : 120872026 (25.00%)
+Nombre de T : 121307048 (25.00%)
+Nombre de C : 115670144 (24.00%)
+Nombre de G : 113084458 (24.00%)
+Pourcentage de GC : 48.00%
+Statistiques du fichier Karlodinium_bib.fasta : 
+Nombre de reads : 24594061
+Longueur maximale : 101 >SRR23051312.1 1 length=101
+Longueur minimale : 101 >SRR23051312.1 1 length=101
+Longueur moyenne : 101
+Nombre de A : 591350256 (23.00%)
+Nombre de T : 689183621 (27.00%)
+Nombre de C : 652251427 (26.00%)
+Nombre de G : 551124759 (22.00%)
+Pourcentage de GC : 48.00%
