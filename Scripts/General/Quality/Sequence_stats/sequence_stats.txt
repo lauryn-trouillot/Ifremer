@@ -1,0 +1,51 @@
+---- Les tatistiques d'assemblage : ---- 
+Statistiques du fichier trinity_20250407_160011.Trinity.fasta : 
+Nombre de reads : 228113
+Longueur maximale : 42715 >TRINITY_DN31796_c0_g1_i1 len=42715 path=[0:0-42714]
+Longueur minimale : 175 >TRINITY_DN15066_c0_g1_i2 len=175 path=[7:0-70 8:71-79 9:80-80 12:81-93 14:94-105 15:106-117 16:118-125 18:126-140 19:141-142 21:143-147 27:148-174]
+Longueur moyenne : 1119
+Nombre de A : 54836941 (21.00%)
+Nombre de T : 55216941 (21.00%)
+Nombre de C : 73291301 (28.00%)
+Nombre de G : 72000858 (28.00%)
+Pourcentage de GC : 56.00%
+Statistiques du fichier transcripts.fasta : 
+Nombre de reads : 590505
+Longueur maximale : 48342 >NODE_1_length_48342_cov_407.070383_g0_i0
+Longueur minimale : 52 >NODE_590504_length_52_cov_224.287129_g547583_i0
+Longueur moyenne : 524
+Nombre de A : 68804603 (22.00%)
+Nombre de T : 70493870 (22.00%)
+Nombre de C : 84411301 (27.00%)
+Nombre de G : 85018576 (27.00%)
+Pourcentage de GC : 54.00%
+Statistiques du fichier ClusterRattelCustomGreg-Primnesium.fasta : 
+Nombre de reads : 29960
+Longueur maximale : 7821 >190
+Longueur minimale : 200 >29957
+Longueur moyenne : 1187
+Nombre de A : 7317334 (20.00%)
+Nombre de T : 7256597 (20.00%)
+Nombre de C : 10439061 (29.00%)
+Nombre de G : 10559852 (29.00%)
+Pourcentage de GC : 59.00%
+Statistiques du fichier longest_isoforms.fasta : 
+Nombre de reads : 547585
+Longueur maximale : 48342 >NODE_1_length_48342_cov_407.070383_g0_i0
+Longueur minimale : 52 >NODE_590504_length_52_cov_224.287129_g547583_i0
+Longueur moyenne : 360
+Nombre de A : 45870277 (23.00%)
+Nombre de T : 47461479 (24.00%)
+Nombre de C : 51452619 (26.00%)
+Nombre de G : 51949865 (26.00%)
+Pourcentage de GC : 52.00%
+Statistiques du fichier cluster_0.95_10.fasta : 
+Nombre de reads : 545316
+Longueur maximale : 48342 >NODE_1_length_48342_cov_407.070383_g0_i0
+Longueur minimale : 52 >NODE_590504_length_52_cov_224.287129_g547583_i0
+Longueur moyenne : 359
+Nombre de A : 45604163 (23.00%)
+Nombre de T : 47176278 (24.00%)
+Nombre de C : 51114817 (26.00%)
+Nombre de G : 51599770 (26.00%)
+Pourcentage de GC : 52.00%
