@@ -9,9 +9,9 @@
 cd "${PBS_O_WORKDIR}"
 
 # Initialiser les dossiers pour les logs et les sorties
-ASSEMBLY_FILE="/home1/datawork/ltrouill/ifremer/Prymnesium/Results/rnaspades/rnaspades_20250407_093832/transcripts.fasta"
-SCRIPT="/home1/datawork/ltrouill/ifremer/Prymnesium/Scripts/Prymnesium_pipeline/Assembly_cleaning/longest_iso.py"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/autres/"
+ASSEMBLY_FILE="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/transcripts.fasta"
+SCRIPT="/home1/datawork/ltrouill/Ifremer/Scripts/Prymnesium/longest_iso.py"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/isoforms/"
 RESULT_FOLDER="/home1/scratch/ltrouill/isoforms_$(date +%Y%m%d_%H%M%S)"
 
 # Créer les dossiers nécessaires
