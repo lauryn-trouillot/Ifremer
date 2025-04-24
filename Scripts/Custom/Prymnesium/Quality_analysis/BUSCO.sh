@@ -11,10 +11,10 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="BUSCO_${TIMESTAMP}"
-SEQ_FILE="/home1/datawork/ltrouill/ifremer/Prymnesium/Results/Prymne_rnabloom_medaka_nextpolish.fasta"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/BUSCO"
-RESULT_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Results/BUSCO/${NAME}"
-DB_FOLDER="/home1/datawork/ltrouill/ifremer/data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
+SEQ_FILE="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/transcripts.fasta"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/BUSCO"
+RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Prymnesium/Results/BUSCO/${NAME}"
+DB_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
 FASTQ=False  # Mettre à true si le fichier d'entrée est au format FASTQ
 LOGFILE="${LOG_FOLDER}/busco_${TIMESTAMP}.log"
 
@@ -35,6 +35,8 @@ fi
 
 # Chargement de l'environnement BUSCO
 . /appli/bioinfo/busco/5.6.1/env.sh
+
+cd "$RESULT_FOLDER"
 
 # Commande BUSCO
 echo "Démarrage de BUSCO..." >>"$LOGFILE"

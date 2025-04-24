@@ -10,10 +10,10 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 # Variables
 ####################################
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/Bowtie2"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Prymnesium/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/datawork/ltrouill/ifremer/Prymnesium/Results/Prymne_rnabloom_medaka_nextpolish.fasta"
-READS_FOLDER="/home1/datawork/ltrouill/ifremer/data/rawdata/illumina/Prymnesium/fastp_20250407_081434"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/transcripts.fasta"
+READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Prymnesium/Short_reads/fastp_20250407_081434"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 FASTQ=True
 
