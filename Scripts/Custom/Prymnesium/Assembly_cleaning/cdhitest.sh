@@ -11,10 +11,10 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="cluster_${TIMESTAMP}"
-ASSEMBLY_FILE="/home/datawork-lpba/Prymnesium/PrymneTranscripto/AssemblageGreg/ClusterRattelCustomGreg-Primnesium.fasta"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/Clustering/"
-LOG_FILE="$LOG_FOLDER/cluster_${TIMESTAMP}.log"
-RESULT_FOLDER="/home1/scratch/ltrouill/cluster_${TIMESTAMP}"
+ASSEMBLY_FILE="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/low_expression/transcripts_analysis_20250424_212355/filtered_transcripts.fasta"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Clustering/"
+LOG_FILE="$LOG_FOLDER/${NAME}.log"
+RESULT_FOLDER="/home1/scratch/ltrouill/${NAME}"
 
 mkdir -p "$LOG_FOLDER" "$RESULT_FOLDER" 
 
@@ -29,5 +29,8 @@ cd-hit-est -i "$ASSEMBLY_FILE" \
             -o "$CLUSTER_FILE" \
             -c "$SIMILARITY_VALUE" \
             -n "$THRESHOLD_VALUE" \
+            -p 1 \
+            -d 0 \
+            -b 3 \
             -M 300000 \
             -T 15 >> "$LOG_FILE" 2>&1
