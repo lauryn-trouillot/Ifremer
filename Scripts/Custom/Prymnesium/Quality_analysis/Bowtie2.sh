@@ -10,12 +10,12 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 # Variables
 ####################################
-LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Prymnesium/Bowtie2"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/transcripts.fasta"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/low_expression/transcripts_analysis_20250424_212355/filtered_transcripts.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Prymnesium/Short_reads/fastp_20250407_081434"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
-FASTQ=True
+FASTQ=False
 
 BOWTIE2_THREADS=15
 BOWTIE2_OPTIONS="--no-unal -q"
@@ -64,8 +64,8 @@ bowtie2 \
   -p "$BOWTIE2_THREADS" \
   $BOWTIE2_OPTIONS \
   -x "$INDEX_PREFIX" \
-  -1 "$READS_FOLDER/AA_R1.cleaned.fastq.gz,$READS_FOLDER/D1_R1.cleaned.fastq.gz" \
-  -2 "$READS_FOLDER/AA_R2.cleaned.fastq.gz,$READS_FOLDER/D1_R2.cleaned.fastq.gz" \
+  -1 "$READS_FOLDER/AA_R1.cleaned.fastq.gz" \
+  -2 "$READS_FOLDER/AA_R2.cleaned.fastq.gz" \
   -S "$RESULT_FOLDER/Prymnesium_align.sam" >> "$LOGFILE" 2>&1
 
 echo "=== Fin du script : $(date) ===" >>"$LOGFILE"
