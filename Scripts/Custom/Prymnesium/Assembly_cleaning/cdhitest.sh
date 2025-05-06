@@ -28,6 +28,7 @@ CLUSTER_FILE="$RESULT_FOLDER/cluster_${SIMILARITY_VALUE}_${THRESHOLD_VALUE}.fast
 cd-hit-est -i "$ASSEMBLY_FILE" \
             -o "$CLUSTER_FILE" \
             -c "$SIMILARITY_VALUE" \
+            -s 0.7
             -n "$THRESHOLD_VALUE" \
             -p 1 \
             -d 0 \

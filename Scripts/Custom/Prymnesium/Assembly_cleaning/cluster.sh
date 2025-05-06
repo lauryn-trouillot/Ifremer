@@ -23,7 +23,7 @@ DB_FOLDER="$CHEMIN/Data/busco_downloads/lineages/eukaryota_odb10"
 CSV_FILE="$RESULT_FOLDER/cluster_result.csv"
 
 # Paramètres initiaux
-SIMILARITY_VALUES=(0.99 0.98 0.97 0.96 0.95)
+SIMILARITY_VALUES=(0.99 0.98 0.97 0.96 0.95 0.92 0.90 0.88 0.85)
 
 # Vérification de l'existence d'un dossier cluster_20*
 EXISTING_CLUSTER=$(ls -d /home1/scratch/ltrouill/cluster_20* 2>/dev/null | tail -n 1)
@@ -67,7 +67,7 @@ for SIMILARITY_VALUE in "${SIMILARITY_VALUES[@]}"; do
     fi
 
     . /appli/bioinfo/cd-hit/4.8.1/env.sh
-    cd-hit-est -i "$INPUT_FILE" -o "$CLUSTER_FILE" -c "$SIMILARITY_VALUE" -n "$THRESHOLD_VALUE" -M 300000 -T 15
+    cd-hit-est -i "$INPUT_FILE" -o "$CLUSTER_FILE" -c "$SIMILARITY_VALUE" -s 0.7 -n "$THRESHOLD_VALUE" -M 300000 -T 15
 
     CLUSTER_BASENAME=$(basename "$CLUSTER_FILE" .fasta)
     BUSCO_FOLDER="$BUSCOS_FOLDER/BUSCO_${CLUSTER_BASENAME}"
