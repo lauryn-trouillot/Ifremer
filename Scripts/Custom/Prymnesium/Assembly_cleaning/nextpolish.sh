@@ -13,7 +13,6 @@ cd "${PBS_O_WORKDIR}"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/nextpolish"
 RESULT_FOLDER="/home1/scratch/ltrouill/nextpolish_$(date +%Y%m%d_%H%M%S)"
 FILENAME="/home/datawork-lpba/Prymnesium/PrymneTranscripto/AssemblageGreg/ClusterRattelCustomGreg-Primnesium.fasta"
-LR="/home/datawork-lpba/Prymnesium/PrymneTranscripto/RNA-longReads-fev25/Prymesium_cDNA_24fev25.bam"
 SR_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Prymnesium/Short_reads/fastp_20250407_081434"
 LOGFILE="${LOG_FOLDER}/nextpolish_$(date +%Y%m%d_%H%M%S).log"
 
@@ -25,35 +24,15 @@ mkdir -p "$LOG_FOLDER" "$RESULT_FOLDER"
 
 echo "=== Début du script : $(date) ===" >"$LOGFILE"
 
-# ====== Étape 1 : Polissage avec Medaka ======
-
-echo "Polissage avec Medaka" >> "$LOGFILE"
-
-. /appli/bioinfo/medaka/2.0.1/env.sh
-
-medaka_consensus -i "$LR" \
-                    -d "$FILENAME" \
-                    -o "$RESULT_FOLDER" \
-                    -t 16 >> "$LOGFILE" 2>&1
-
-# Vérification de la sortie de Medaka
-if [ ! -f "$RESULT_FOLDER/consensus.fasta" ]; then
-    echo "Erreur : le fichier consensus.fasta de Medaka est manquant !" >> "$LOGFILE"
-    exit 1
-fi
-
-echo "[1/3] BWA index" >> "$LOGFILE"
-
 . /appli/bioinfo/bwa/0.7.17/env.sh
 
-# Indexation de l'assemblage généré par Medaka
-bwa index "$RESULT_FOLDER/consensus.fasta" >> "$LOGFILE" 2>&1
+bwa index "$FILENAME" >> "$LOGFILE" 2>&1
 
-echo "[2/3] Alignement des reads courts" >> "$LOGFILE"
+echo "[1/2] Alignement des reads courts" >> "$LOGFILE"
 
 # Alignement des lectures Illumina avec bwa mem
 bwa mem -t 16 \
-    "$RESULT_FOLDER/consensus.fasta" \
+    "$FILENAME" \
     "$SR_FOLDER/AA_R1.cleaned.fastq.gz" "$SR_FOLDER/AA_R2.cleaned.fastq.gz" \
     > "$RESULT_FOLDER/short.sam" 2>> "$LOGFILE"
 
@@ -86,7 +65,7 @@ cat <<EOF > "$RESULT_FOLDER/nextpolish.cfg"
 job_type = local
 task = 1
 rewrite = yes
-genome = $RESULT_FOLDER/consensus.fasta
+genome = "$FILENAME"
 genome_size = auto
 thread = 16
 fix_start = no
