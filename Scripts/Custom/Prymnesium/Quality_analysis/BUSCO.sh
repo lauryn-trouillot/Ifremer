@@ -11,7 +11,7 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="BUSCO_${TIMESTAMP}"
-SEQ_FILE="/home/datawork-lpba/Prymnesium/PrymneGenomeV1/PrymneTranscriptomeV1.fasta"
+SEQ_FILE="/home1/datawork/ltrouill/Ifremer/Data/Bibliography/"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/BUSCO"
 RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/BUSCO/${NAME}"
 DB_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
