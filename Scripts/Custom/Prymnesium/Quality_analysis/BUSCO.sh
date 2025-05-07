@@ -11,7 +11,7 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="BUSCO_${TIMESTAMP}"
-SEQ_FILE="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/polishing/nextpolish_20250506/genome.nextpolish.fasta"
+SEQ_FILE="/home1/scratch/ltrouill/lordec_20250507_125554/corrected_assembly.fasta"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/BUSCO"
 RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/BUSCO/${NAME}"
 DB_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
