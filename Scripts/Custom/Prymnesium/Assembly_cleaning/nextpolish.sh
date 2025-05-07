@@ -65,7 +65,7 @@ cat <<EOF > "$RESULT_FOLDER/nextpolish.cfg"
 job_type = local
 task = 1
 rewrite = yes
-genome = "$FILENAME"
+genome = $FILENAME
 genome_size = auto
 thread = 16
 fix_start = no
