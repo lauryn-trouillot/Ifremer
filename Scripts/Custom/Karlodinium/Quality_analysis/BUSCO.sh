@@ -11,10 +11,10 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="BUSCO_${TIMESTAMP}"
-SEQ_FILE="/home1/scratch/ltrouill/cluster_20250408_095429/cluster_0.95_10.fasta"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/BUSCO"
-RESULT_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Results/BUSCO/${NAME}"
-DB_FOLDER="/home1/datawork/ltrouill/ifremer/data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
+SEQ_FILE="/home1/scratch/ltrouill/rnaspades_20250506_111029/transcripts.fasta"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/BUSCO"
+RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/BUSCO/${NAME}"
+DB_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
 FASTQ=False  # Mettre à true si le fichier d'entrée est au format FASTQ
 LOGFILE="${LOG_FOLDER}/busco_${TIMESTAMP}.log"
 
