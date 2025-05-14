@@ -18,9 +18,9 @@ EXT_R1="_R1.cleaned.fastq.gz"
 EXT_R2="_R2.cleaned.fastq.gz"
 
 # Seuils de filtrage
-MIN_EXPR=1
-MIN_DOM_ISO=50
-HIGHEST_ONLY=1
+MIN_EXPR=1 # Seuil minimum d’expression (TPM) pour qu’un transcrit soit considéré comme "exprimé".
+MIN_DOM_ISO=50 # Seuil en pourcentage pour dire qu’un isoforme est dominant dans un gène.
+HIGHEST_ONLY=1 # Ne garder qu’un seul transcrit par gène : le plus exprimé.
 
 # === Dossier de travail ===
 WORKDIR="/home1/scratch/ltrouill/${TRANS_NAME}_analysis_$(date +%Y%m%d_%H%M%S)"
