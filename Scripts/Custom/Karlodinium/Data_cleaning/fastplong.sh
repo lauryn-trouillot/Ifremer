@@ -16,9 +16,9 @@ cd "${PBS_O_WORKDIR}"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="fastplong_${TIMESTAMP}"
 LONG_READS="/home/datawork-lpba/karlodinium/Transcriptome/RawDataTEMP/Karlodinium_cDNA.fastq"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Karlodinium/Errors/fastplong/"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/fastplong"
 RESULT_FOLDER="/home1/scratch/ltrouill/fastplong_${TIMESTAMP}"
-RESULT_FILE="$RESULT_FOLDER/Karlodinium_cleaned.fastq.gz"
+RESULT_FILE="$RESULT_FOLDER/Karlodinium_cleaned.fastq"
 REPORT_FOLDER="$RESULT_FOLDER/Report/"
 LOG_FILE="$LOG_FOLDER/${NAME}.log"
 
