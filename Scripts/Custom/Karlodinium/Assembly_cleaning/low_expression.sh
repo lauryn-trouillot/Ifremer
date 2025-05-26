@@ -8,7 +8,7 @@
 # === VARIABLES À MODIFIER ===
 export LC_ALL=C
 
-TRANSCRIPTS="/home1/scratch/ltrouill/rnaspades_20250506_111029/transcripts.fasta"
+TRANSCRIPTS="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/rnaspades/rnaspades_20250516_122828/transcripts.fasta"
 TRANS_NAME=$(basename "$TRANSCRIPTS" .fasta)
 LOGFILE="/home1/datawork/ltrouill/Ifremer/Errors/expression_filter/transcriptome_filter_$(date +%Y%m%d_%H%M%S).log"
 
