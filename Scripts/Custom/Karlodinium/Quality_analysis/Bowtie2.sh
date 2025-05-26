@@ -12,7 +12,7 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/low_expression/transcripts_analysis_20250512_142253/filtered_transcripts.fasta"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/low_expression/transcripts_analysis_20250526_092642/filtered_transcripts.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Karlodinium/Short_reads/fastp_20250414_121346"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 FASTQ=False
@@ -60,12 +60,16 @@ echo "Construction terminée" >>"$LOGFILE"
 ####################################
 echo "--- Début de l'alignement Bowtie2 ---" >>"$LOGFILE"
 
-bowtie2 \
-  -p "$BOWTIE2_THREADS" \
-  $BOWTIE2_OPTIONS \
-  -x "$INDEX_PREFIX" \
-  -1 "$READS_FOLDER/9_R1.cleaned.fastq.gz" \
-  -2 "$READS_FOLDER/9_R2.cleaned.fastq.gz" \
-  -S "$RESULT_FOLDER/Prymnesium_align.sam" >> "$LOGFILE" 2>&1
+for file in $READS_FOLDER/*_R1.cleaned.fastq
+do
+  base=$(basename "$file" _R1.cleaned.fastq)
+  bowtie2 \
+    -p "$BOWTIE2_THREADS" \
+    $BOWTIE2_OPTIONS \
+    -x "$INDEX_PREFIX" \
+    -1 "${READS_FOLDER}/${base}_R1.cleaned.fastq" \
+    -2 "${READS_FOLDER}/${base}_R2.cleaned.fastq" \
+    -S "${RESULT_FOLDER}/${base}.sam"
 
+done
 echo "=== Fin du script : $(date) ===" >>"$LOGFILE"
