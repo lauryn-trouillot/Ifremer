@@ -60,15 +60,15 @@ echo "Construction terminée" >>"$LOGFILE"
 ####################################
 echo "--- Début de l'alignement Bowtie2 ---" >>"$LOGFILE"
 
-for file in $READS_FOLDER/*_R1.cleaned.fastq
+for file in $READS_FOLDER/*_R1.cleaned.fastq.gz
 do
-  base=$(basename "$file" _R1.cleaned.fastq)
+  base=$(basename "$file" _R1.cleaned.fastq.gz)
   bowtie2 \
     -p "$BOWTIE2_THREADS" \
     $BOWTIE2_OPTIONS \
     -x "$INDEX_PREFIX" \
-    -1 "${READS_FOLDER}/${base}_R1.cleaned.fastq" \
-    -2 "${READS_FOLDER}/${base}_R2.cleaned.fastq" \
+    -1 "${READS_FOLDER}/${base}_R1.cleaned.fastq.gz" \
+    -2 "${READS_FOLDER}/${base}_R2.cleaned.fastq.gz" \
     -S "${RESULT_FOLDER}/${base}.sam"
 
 done
