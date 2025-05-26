@@ -15,7 +15,7 @@ NAME="rnaspades_${TIMESTAMP}"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/rnaspades"
 RESULT_FOLDER="/home1/scratch/ltrouill/${NAME}"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Karlodinium/Short_reads/fastp_20250414_121346"
-MINION_FILE="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Karlodinium/Long_reads/porechop_20250416/Karlodinium_cDNA_cleaned.fastq"
+MINION_FILE="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Karlodinium/Long_reads/fastplong_20250516_074145/Karlodinium_cleaned.fastq"
 
 # Paramètres SPAdes
 SPADES_THREADS=20
