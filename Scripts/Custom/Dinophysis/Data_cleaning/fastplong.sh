@@ -15,10 +15,10 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="fastplong_${TIMESTAMP}"
-LONG_READS="/home/datawork-lpba/karlodinium/Transcriptome/RawDataTEMP/Karlodinium_cDNA.fastq"
+LONG_READS="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/Dinophysis_cDNA_porechop.fastq"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/fastplong"
-RESULT_FOLDER="/home1/scratch/ltrouill/fastplong_${TIMESTAMP}"
-RESULT_FILE="$RESULT_FOLDER/Karlodinium_cleaned.fastq"
+RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastplong_${TIMESTAMP}"
+RESULT_FILE="$RESULT_FOLDER/Dinophysis_cDNA_porechop_fastplong.fastq"
 REPORT_FOLDER="$RESULT_FOLDER/Report/"
 LOG_FILE="$LOG_FOLDER/${NAME}.log"
 

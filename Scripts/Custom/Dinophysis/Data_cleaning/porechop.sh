@@ -7,6 +7,6 @@
 
 mkdir -p "/home1/datawork/ltrouill/ifremer/Karlodinium/Errors/porechop/"
 
-python3 /home1/datawork/ltrouill/Porechop/porechop-runner.py -i /home/datawork-lpba/karlodinium/Transcriptome/RawDataTEMP/Karlodinium_cDNA.fastq \
-                                                             -o /home1/scratch/ltrouill/Karlodinium_cDNA_cleaned.fastq \
-                                                              > /home1/datawork/ltrouill/ifremer/Karlodinium/Errors/porechop/porechop.log 2>&1
+python3 /home1/datawork/ltrouill/Porechop/porechop-runner.py -i /home1/datawork/ltrouill/Ifremer/Data/Rawdata/Dinophysis/LongReadsARN/Dinophysis_cDNA.fastq.gz \
+                                                             -o /home1/scratch/ltrouill/Dinophysis_cDNA_cleaned.fastq \
+                                                              > /home1/datawork/ltrouill/Ifremer/Errors/porechop/porechop.log 2>&1
