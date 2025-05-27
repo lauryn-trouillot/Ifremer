@@ -9,7 +9,7 @@
 cd "${PBS_O_WORKDIR}"
 
 # Initialiser les dossiers pour les logs et les sorties
-FASTQ_FILE="/home/datawork-lpba/Dinophysis/RawData/LongReadsARN/Dinophysis_cDNA.fastq.gz"
+FASTQ_FILE="/home1/datawork/ltrouill/Ifremer/Data/Rawdata/Dinophysis/LongReadsARN/Dinophysis_cDNA.fastq.gz"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/fastqc"
 RESULT_FOLDER="/home1/scratch/ltrouill/fastqc_$(date +%Y%m%d_%H%M%S)"
 
