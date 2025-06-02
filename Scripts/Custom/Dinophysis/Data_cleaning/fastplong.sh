@@ -36,7 +36,7 @@ fastplong --in "$LONG_READS" \
         -j "$REPORT_FOLDER/Report.json" \
         --n_base_limit 10 \
         --mean_qual 20 \
-        --qualified_quality_phred 20 \
+        --qualified_quality_phred 15 \
         --unqualified_percent_limit 40 \
         --length_required 200 \
         --length_limit 10000 \
