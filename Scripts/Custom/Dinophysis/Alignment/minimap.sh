@@ -11,7 +11,7 @@ cd "${PBS_O_WORKDIR}"
 
 # =================== DÉFINITIONS DES FICHIERS ===================
 
-LR_FILE="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastplong_20250527_120739/Dinophysis_cDNA_porechop_fastplong.fastq"
+LR_FILE="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastplong_20250602_130119/Dinophysis_cDNA_porechop_fastplong.fastq"
 TRANSCRIPTOME="/home1/datawork/ltrouill/Ifremer/Data/Bibliography/mesodinium_chamaeleon_nrmc1802.transcriptome.fasta"
 GENOME="/home/datawork-lpba/Teleaulax/Genome_JGI/Teleaulax_JGI_GenomeV1.fasta"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/minimap2/"
