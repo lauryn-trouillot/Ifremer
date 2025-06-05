@@ -11,7 +11,7 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="BUSCO_${TIMESTAMP}"
-SEQ_FILE="/home1/datawork/ltrouill/Ifremer/Results/Dinophysis/rnaspades/rnaspades_20250528_103503/transcripts.fasta"
+SEQ_FILE="/home1/scratch/ltrouill/rnaspades_20250602_160202/transcripts.fasta"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/BUSCO"
 RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/BUSCO/${NAME}"
 DB_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/busco_downloads/lineages/eukaryota_odb10" # A télécharger
