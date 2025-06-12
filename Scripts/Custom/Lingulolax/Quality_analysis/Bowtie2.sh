@@ -12,8 +12,8 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/scratch/ltrouill/rnaspades_20250602_160202/transcripts.fasta"
-READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_20250527_124206"
+FILENAME="/home1/scratch/ltrouill/transcripts_analysis_20250612_112019/filtered_transcripts.fasta"
+READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Lingulolax/fastp_20250605_114110"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 FASTQ=False
 
@@ -64,7 +64,7 @@ bowtie2 \
   -p "$BOWTIE2_THREADS" \
   $BOWTIE2_OPTIONS \
   -x "$INDEX_PREFIX" \
-  -1 "$READS_FOLDER/ERR9832999_R1.cleaned.fastq.gz" \
-  -2 "$READS_FOLDER/ERR9832999_R2.cleaned.fastq.gz" \
+  -1 "$READS_FOLDER/Lp_R1.cleaned.fastq.gz" \
+  -2 "$READS_FOLDER/Lp_R2.cleaned.fastq.gz" \
   -S "$RESULT_FOLDER/Dinophysis_align.sam" >> "$LOGFILE" 2>&1
 
