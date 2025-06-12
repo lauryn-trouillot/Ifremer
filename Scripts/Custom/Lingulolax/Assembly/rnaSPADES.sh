@@ -14,8 +14,8 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="rnaspades_${TIMESTAMP}"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/rnaspades"
 RESULT_FOLDER="/home1/scratch/ltrouill/${NAME}"
-READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_20250527_124206"
-MINION_FILE="/home1/scratch/ltrouill/minimap2_20250528_082510/DiNoPrey.fastq.gz"
+READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Lingulolax/fastp_20250605_114110"
+
 
 # Paramètres SPAdes
 SPADES_THREADS=20
@@ -25,11 +25,11 @@ SPADES_MEMORY=300
 mkdir -p "$LOG_FOLDER" "$RESULT_FOLDER"
 
 # Combiner les fichiers de lecture Illumina
-for file in "$READS_FOLDER"/ERR9832999_R1.cleaned.fastq.gz; do
+for file in "$READS_FOLDER"/Lp_R1.cleaned.fastq.gz; do
     cat "$file" >> "$RESULT_FOLDER/LEFT.fastq.gz"
 done
 
-for file in "$READS_FOLDER"/ERR9832999_R2.cleaned.fastq.gz; do
+for file in "$READS_FOLDER"/Lp_R2.cleaned.fastq.gz; do
     cat "$file" >> "$RESULT_FOLDER/RIGHT.fastq.gz"
 done
 
@@ -43,7 +43,6 @@ echo "Début de l'assemblage avec SPAdes..." | tee -a "${LOG_FOLDER}/spades_${TI
 spades.py \
   -1 "$LEFT_READS" \
   -2 "$RIGHT_READS" \
-  --nanopore "$MINION_FILE" \
   -o "$RESULT_FOLDER" \
   --rna \
   --threads "$SPADES_THREADS" \

@@ -8,12 +8,12 @@
 # === VARIABLES À MODIFIER ===
 export LC_ALL=C
 
-TRANSCRIPTS="/home1/datawork/ltrouill/Ifremer/Results/Dinophysis/rnaspades/rnaspades_20250528_103503/transcripts.fasta"
+TRANSCRIPTS="/home1/scratch/ltrouill/rnaspades_20250610_132611/transcripts.fasta"
 TRANS_NAME=$(basename "$TRANSCRIPTS" .fasta)
 LOGFILE="/home1/datawork/ltrouill/Ifremer/Errors/expression_filter/transcriptome_filter_$(date +%Y%m%d_%H%M%S).log"
 
-READS_DIR="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_20250527_124206"
-SAMPLES=("ERR9832999")  # adapter si plusieurs échantillons
+READS_DIR="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Lingulolax/fastp_20250605_114110"
+SAMPLES=("Lp")  # adapter si plusieurs échantillons
 EXT_R1="_R1.cleaned.fastq.gz"
 EXT_R2="_R2.cleaned.fastq.gz"
 
