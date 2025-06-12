@@ -14,9 +14,9 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="fastp_${TIMESTAMP}"
-SHORT_READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Rawdata/Dinophysis/ShortReadsARN"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Karlodinium/Errors/fastp"
-RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_${TIMESTAMP}"
+SHORT_READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Rawdata/Lingulolax"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/fastp/"
+RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Lingulolax/fastp_${TIMESTAMP}"
 REPORT_FOLDER="$RESULT_FOLDER/Report/"
 LOG_FILE="$LOG_FOLDER/${NAME}.log"
 
@@ -26,9 +26,9 @@ LENGTH=100
 
 mkdir -p "$LOG_FOLDER" "$RESULT_FOLDER" "$REPORT_FOLDER"
 
-for R1 in $SHORT_READS_FOLDER/*_1.fastq.gz; do
-    R2=${R1/_1/_2}
-    base=$(basename "${R1%_1.fastq.gz}")
+for R1 in $SHORT_READS_FOLDER/*_R1.fastq.gz; do
+    R2=${R1/_R1/_R2}
+    base=$(basename "${R1%_R1.fastq.gz}")
     
     echo "Nettoyage des reads : ${base} -- $(date +%Y%m%d_%H%M%S)" >> "$LOG_FILE"
     
