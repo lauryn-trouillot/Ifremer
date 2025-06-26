@@ -12,7 +12,7 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/scratch/ltrouill/transcripts_analysis_20250612_112019/filtered_transcripts.fasta"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Lingulodinium/rnaspades/rnaspades_20250610_132611/hard_filtered_transcripts.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Lingulolax/fastp_20250605_114110"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 FASTQ=False
