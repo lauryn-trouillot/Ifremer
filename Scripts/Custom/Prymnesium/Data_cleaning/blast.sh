@@ -9,12 +9,14 @@
 
 cd $PBS_O_WORKDIR
 
-# Chemins en dur
-TRANSCRIPTS="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/transcripts.fasta"
-PREFIX="rnaspades"
+. /appli/bioinfo/blast/2.12.0/env.sh
 
-DB_18S="blastdb/18S_fungal_sequences/18S_fungal_sequences"
-DB_28S="blastdb/28S_fungal_sequences/28S_fungal_sequences"
+# Chemins en dur
+TRANSCRIPTS="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnabloom/rnabloom_20250425_085518/rnabloom.transcripts.fasta"
+PREFIX="rnabloom"
+
+DB_18S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/18S_fungal_sequences/18S_fungal_sequences"
+DB_28S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/28S_fungal_sequences/28S_fungal_sequences"
 
 RESULTS_FOLDER="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blast_$(date +%Y%m%d_%H%M%S)"
 
