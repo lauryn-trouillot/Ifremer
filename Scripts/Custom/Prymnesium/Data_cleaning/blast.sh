@@ -12,8 +12,8 @@ cd $PBS_O_WORKDIR
 . /appli/bioinfo/blast/2.12.0/env.sh
 
 # Chemins en dur
-TRANSCRIPTS="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnabloom/rnabloom_20250425_085518/rnabloom.transcripts.fasta"
-PREFIX="rnabloom"
+TRANSCRIPTS="/home/datawork-lpba/Prymnesium/PrymneTranscripto/TranscriptomeRef-Genalg/LongReadsRNA/CleanedData/Galaxy43_Prymnesium_cDNA_Porechop_Qualite.fastq"
+PREFIX="rawLR"
 
 DB_18S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/18S_fungal_sequences/18S_fungal_sequences"
 DB_28S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/28S_fungal_sequences/28S_fungal_sequences"
@@ -52,6 +52,7 @@ cat "$CANDIDATES_18S" "$CANDIDATES_28S" | sort | uniq > "$ALL_RRNA"
 
 # Résumé
 TOTAL=$(grep -c "^>" "$TRANSCRIPTS")
+# TOTAL=$(($(wc -l < "$TRANSCRIPTS") / 4)) Pour les reads brute fastq
 N_18S=$(wc -l < "$CANDIDATES_18S")
 N_28S=$(wc -l < "$CANDIDATES_28S")
 N_TOTAL=$(wc -l < "$ALL_RRNA")
