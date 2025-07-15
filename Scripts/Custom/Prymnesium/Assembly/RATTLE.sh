@@ -23,7 +23,7 @@ RUN_STEP_2=false  # Passez à `true` pour activer l'étape 2
 VERBOSE="--verbose"
 
 # Chemins (à adapter)
-FILENAME="/home/datawork-lpba/Prymnesium/PrymneTranscripto/RNA-longReads-fev25/Galaxy43-[Prymnesium_cDNA Porechop OK Qualite Ok].fastq"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/minimap2/minimap2_20250707_144150/No_mrna_reads.fastq"
 LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/RATTLE"
 RESULT_FOLDER="/home1/scratch/ltrouill/RATTLE_${TIMESTAMP}"
 CLUSTERS_FOLDER="$RESULT_FOLDER/clusters"

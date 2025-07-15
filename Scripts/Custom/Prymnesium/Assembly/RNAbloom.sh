@@ -12,7 +12,7 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="rnabloom_${TIMESTAMP}"
-FILENAME="/home/datawork-lpba/Prymnesium/PrymneTranscripto/RNA-longReads-fev25/Galaxy43-[Prymnesium_cDNA Porechop OK Qualite Ok].fastq"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/minimap2/minimap2_20250707_144150/No_mrna_reads.fastq"
 LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/rnabloom"
 RESULT_FOLDER="/home1/scratch/ltrouill/rnabloom_${TIMESTAMP}"
 LOG_FILE="$LOG_FOLDER/${NAME}.log"
