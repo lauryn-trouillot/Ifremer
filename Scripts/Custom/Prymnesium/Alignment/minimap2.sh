@@ -11,7 +11,7 @@ cd "${PBS_O_WORKDIR}"
 # =================== DÉFINITIONS DES FICHIERS ===================
 
 FASTQ_FILE="/home/datawork-lpba/Prymnesium/PrymneTranscripto/RNA-longReads-fev25/Galaxy43_Prymnesium_cDNA_Porechop_Qualite.fastq"
-REF_FASTA="/home/datawork-lpba/Prymnesium/PrymneGenomeV1/PrymneGenomeV1.fasta"
+REF_FASTA="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/hard_filtered_transcripts.fasta"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/minimap2/"
 RESULT_FOLDER="/home1/scratch/ltrouill/minimap2_$(date +%Y%m%d_%H%M%S)"
 
@@ -64,13 +64,16 @@ if [ ! -f "$BAM_OUT" ]; then
     echo "Tri terminé." >> "$LOG_FILE"
 fi
 
-if [ ! -f "${BAM_OUT}.bai" ]; then
-    echo "Indexation du fichier BAM..." >> "$LOG_FILE"
-    samtools index "$BAM_OUT" 2>> "$LOG_FILE"
-    echo "Indexation terminée." >> "$LOG_FILE"
-fi
+echo "Récupération des reads non aligné sur le transcriptome" >> "$LOG_FILE"
 
-# =================== NETTOYAGE (optionnel) ===================
+samtools view -b -f 4 "$BAM_OUT" > "$RESULT_FOLDER/No_mrna_reads.bam" 2>> "$LOG_FILE"
 
-# Uncomment if you want to delete SAM to save space:
-# rm "$SAM_OUT"
+echo "Conversion des données brute en fastq"
+
+samtools fastq "$RESULT_FOLDER/No_mrna_reads.bam" > "$RESULT_FOLDER/No_mrna_reads.fastq" 2>> "$LOG_FILE"
+
+echo "Fin de la pipeline -  $(date +%Y%m%d_%H%M%S)"
+
+
+
+
