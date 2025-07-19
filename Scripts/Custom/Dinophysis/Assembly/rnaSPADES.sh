@@ -15,7 +15,7 @@ NAME="rnaspades_${TIMESTAMP}"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/rnaspades"
 RESULT_FOLDER="/home1/scratch/ltrouill/${NAME}"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_20250527_124206"
-MINION_FILE="/home1/scratch/ltrouill/minimap2_20250528_082510/DiNoPrey.fastq.gz"
+MINION_FILE="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/DiNoPrey.fastq.gz"
 
 # Paramètres SPAdes
 SPADES_THREADS=20
