@@ -17,11 +17,17 @@ tRNAscan-SE -G \
   -o "$TRNASCAN_FOLDER/trnascan_results.txt" \
   "$NON_RRNA"
 
-sed 1,3d "$TRNASCAN_FOLDER/trnascan_results.txt" | cut -f1 | uniq > "$TRNA_LIST"
+
+sed 1,3d "$TRNASCAN_FOLDER/trnascan_results.txt" \
+  | cut -f1 \
+  | sort \
+  | uniq \
+  | tr -d '\r' \
+  | sed 's/[[:space:]]*$//' > "$TRNA_LIST"
+
 
 . /appli/bioinfo/seqkit/2.9.0/env.sh
 
 # Filtration des ARNr parmi les non codants
-seqkit grep -f "$TRNA_LIST" "$NON_RRNA" | seqkit seq -w 0 > "$RNA_FOLDER/tRNA.fasta"
-
-seqkit grep -f "$TRNA_LIST" -v "$NON_RRNA" | seqkit seq -w 0 > "$RNA_FOLDER/others_ncRNA.fasta"
+seqkit grep -f "$TRNA_LIST" -i "$NON_RRNA" | seqkit seq -w 0 > "$RNA_FOLDER/tRNA.fasta"
+seqkit grep -f "$TRNA_LIST" -v -i "$NON_RRNA" | seqkit seq -w 0 > "$RNA_FOLDER/others_ncRNA.fasta"
