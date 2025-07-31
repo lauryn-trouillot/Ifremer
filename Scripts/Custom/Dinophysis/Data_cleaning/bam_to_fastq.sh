@@ -5,6 +5,7 @@
 #PBS -l mem=100gb
 #PBS -l walltime=01:00:00
 
+# Script pour convertir des fichiers BAM en FASTQ
 # Chargement de l'environnement
 cd "${PBS_O_WORKDIR}" || exit 1
 . /appli/bioinfo/samtools/1.19.2/env.sh

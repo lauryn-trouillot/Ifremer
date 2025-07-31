@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Ce script effectue une recherche BLAST des ARNr dans un fichier fasta
+# Il prend en entrée le nom du transcriptome, le fichier fasta (représentant les non codants ici), le dossier de résultats et le dossier des fichiers RNA finaux
+# Il génère des fichiers de sortie pour les ARNr
+# et un résumé des résultats
+
 . /appli/bioinfo/blast/2.12.0/env.sh
 
 # Chemins en dur

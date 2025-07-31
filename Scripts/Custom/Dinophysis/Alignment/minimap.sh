@@ -6,6 +6,9 @@
 #PBS -l mem=40gb
 #PBS -l walltime=72:00:00
 
+# Pour se debarrasser des contaminations par les proies de Dinophysis
+# on retire les reads qui s'alignent sur le transcriptome de Mesodinium et le genome de Teleaulax.
+
 # Aller dans le répertoire de soumission
 cd "${PBS_O_WORKDIR}"
 
@@ -44,6 +47,7 @@ fi
 
 . /appli/bioinfo/minimap2/2.28/env.sh
 
+# Retrait des reads de Mesodinium
 echo "Lancement de minimap2..." >> "$LOG_FILE"
 minimap2 -ax splice  -t 15 "$TRANSCRIPTOME" "$LR_FILE" > "$RESULT_FOLDER/Reads_Mesodinium.sam" 2>> "$LOG_FILE"
 echo "Alignement terminé." >> "$LOG_FILE"
@@ -54,6 +58,7 @@ samtools fastq -n -f 4 "$RESULT_FOLDER/Reads_Mesodinium.sam" | gzip > "$RESULT_F
 
 . /appli/bioinfo/minimap2/2.28/env.sh
 
+# Retrait des reads de Teleaulax
 echo "Lancement de minimap2..." >> "$LOG_FILE"
 minimap2 -ax splice  -t 15 "$GENOME" "$RESULT_FOLDER/DiNoMeso.fastq.gz" > "$RESULT_FOLDER/Reads_Teleau.sam" 2>> "$LOG_FILE"
 echo "Alignement terminé." >> "$LOG_FILE"

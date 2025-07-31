@@ -26,6 +26,7 @@ LENGTH=100
 
 mkdir -p "$LOG_FOLDER" "$RESULT_FOLDER" "$REPORT_FOLDER"
 
+# Ici possibilité de verifier plusieurs fichiers
 for R1 in $SHORT_READS_FOLDER/*_1.fastq.gz; do
     R2=${R1/_1/_2}
     base=$(basename "${R1%_1.fastq.gz}")

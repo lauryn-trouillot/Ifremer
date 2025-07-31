@@ -5,6 +5,9 @@
 #PBS -l mem=100gb
 #PBS -l walltime=10:00:00
 
+# Ce script est le script principal permettant de lancer la pipeline de traitement du transcriptome de Karlodinium.
+# Il inclut les étapes de consensus des transcriptomes, de séparation des ARN codants et non codants, et d'identification des ARNr et ARNt.
+
 cd "$PBS_O_WORKDIR"
 
 # Définir les fichiers d'entrée

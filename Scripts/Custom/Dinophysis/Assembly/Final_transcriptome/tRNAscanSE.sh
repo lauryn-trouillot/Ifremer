@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Ce script exécute tRNAscan-SE pour identifier les tRNA dans un fichier FASTA
+# et sépare les tRNA des autres ARN non codants.
+# Il prend en entrée un fichier FASTA contenant des ARN, un dossier de sortie pour tRNAscan et un dossier de sortie pour les ARN.
+
 . /appli/bioinfo/trnascan-se/2.0.7/env.sh
 
 # Récupération des variables

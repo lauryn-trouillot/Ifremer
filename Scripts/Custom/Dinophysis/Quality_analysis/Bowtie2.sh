@@ -15,7 +15,7 @@ RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
 FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Dinophysis/Final_transcriptome/TranscriptomeTrim_20250720_202751/FINAL_RNA/All_RNA.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_20250527_124206"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
-FASTQ=False
+FASTQ=False # Mettre à True si le fichier d'entrée est en format FASTQ
 
 BOWTIE2_THREADS=15
 BOWTIE2_OPTIONS="--no-unal -q"

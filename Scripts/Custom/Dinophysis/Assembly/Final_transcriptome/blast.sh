@@ -1,16 +1,22 @@
 #!/bin/bash
 
+# Ce script effectue une recherche BLAST des ARNr dans un fichier fasta
+# Il prend en entrée le nom du transcriptome, le fichier fasta (représentant les non codants ici), le dossier de résultats et le dossier des fichiers RNA finaux
+# Il génère des fichiers de sortie pour les ARNr
+# et un résumé des résultats
+
 . /appli/bioinfo/blast/2.12.0/env.sh
 
-# Chemins en dur
+# Variables d'entrée
 NAME=$1
 NC_RNA=$2
 BLAST_FOLDER=$3
 RNA_FOLDER=$4
 
-DB_18S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/18S_fungal_sequences/18S_fungal_sequences"
-DB_28S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/28S_fungal_sequences/28S_fungal_sequences"
-DB_58S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/5_8S_sequences/5_8_rRNA_db"
+# Définitions des variables
+DB_18S="/home1/datawork/ltrouill/Ifremer/Data/DB/blast/blastdb/18S_fungal_sequences/18S_fungal_sequences"
+DB_28S="/home1/datawork/ltrouill/Ifremer/Data/DB/blast/blastdb/28S_fungal_sequences/28S_fungal_sequences"
+DB_58S="/home1/datawork/ltrouill/Ifremer/Data/DB/blast/blastdb/5_8S_sequences/5_8_rRNA_db"
 
 OUT_18S="$BLAST_FOLDER/${NAME}_vs_18S.txt"
 OUT_28S="$BLAST_FOLDER/${NAME}_vs_28S.txt"
@@ -63,7 +69,7 @@ echo "[`date`] Fusion des candidats ARNr..." >> $LOG_FILE
 
 cat "$CANDIDATES_18S" "$CANDIDATES_28S" "$CANDIDATES_58S" | sort | uniq > "$ALL_RRNA"
 
-# Résumé
+# Création d'un fichier de résumé
 TOTAL=$(grep -c "^>" "$NC_RNA")
 N_18S=$(wc -l < "$CANDIDATES_18S")
 N_28S=$(wc -l < "$CANDIDATES_28S")

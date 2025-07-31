@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+# Ce script est utilisé pour former le transcriptome consensus a partir de plusieurs transcriptomes (Ici 2)
+# Il prend en entrée le nom du transcriptome, les fichiers fasta des transcriptomes à assembler, le dossier de résultats et le dossier des fichiers RNA finaux
+
 # Chargement de l'environnement Evigene
 . /appli/bioinfo/evigene/20230715/env.sh
 
@@ -14,7 +17,6 @@ LOG_FILE="$EVIGINE_FOLDER/evigene.log"
 
 echo "[$(date)] Début de la pipeline - Transcriptome final et séparation ARN"
 
-# Étapes avec logs
 
 echo "[$(date)] Concaténation des transcriptomes..."
 cat "$TRANSCRIPTOME_1" "$TRANSCRIPTOME_2" > "$EVIGINE_FOLDER/Conc_${NAME}_transcriptome.fasta"

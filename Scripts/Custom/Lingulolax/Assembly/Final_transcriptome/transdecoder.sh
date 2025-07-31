@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+# Script pour exécuter TransDecoder et séparer les ARN codants et non codants
+# Il prend en entrée le fichier de consensus, le dossier de sortie pour TransDecoder et le dossier de sortie pour les ARN.
+
 CONSENSUS=$1
 TRANSDECODER_FOLDER=$2
 RNA_FOLDER=$3

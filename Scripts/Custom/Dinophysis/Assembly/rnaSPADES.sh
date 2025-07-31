@@ -25,6 +25,7 @@ SPADES_MEMORY=300
 mkdir -p "$LOG_FOLDER" "$RESULT_FOLDER"
 
 # Combiner les fichiers de lecture Illumina
+# Ici on avait qu'un fichier, mais on peut en ajouter d'autres si nécessaire
 for file in "$READS_FOLDER"/ERR9832999_R1.cleaned.fastq.gz; do
     cat "$file" >> "$RESULT_FOLDER/LEFT.fastq.gz"
 done
