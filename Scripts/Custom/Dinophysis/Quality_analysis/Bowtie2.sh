@@ -12,7 +12,7 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Dinophysis/Final_transcriptome/TranscriptomeTrim_20250720_202751/FINAL_RNA/All_RNA.fasta"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Dinophysis/Final_transcriptome/Transcriptome_Dinophysis_20250805_142605/FINAL_RNA/All_RNA_95.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Dinophysis/fastp_20250527_124206"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 FASTQ=False # Mettre à True si le fichier d'entrée est en format FASTQ

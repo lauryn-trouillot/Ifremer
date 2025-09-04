@@ -13,9 +13,9 @@ NC_RNA=$2
 BLAST_FOLDER=$3
 RNA_FOLDER=$4
 
-DB_18S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/18S_fungal_sequences/18S_fungal_sequences"
-DB_28S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/28S_fungal_sequences/28S_fungal_sequences"
-DB_58S="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/blast/blastdb/5_8S_sequences/5_8_rRNA_db"
+DB_18S="/home1/datawork/ltrouill/Ifremer/Data/DB/blast/blastdb/18S_fungal_sequences/18S_fungal_sequences"
+DB_28S="/home1/datawork/ltrouill/Ifremer/Data/DB/blast/blastdb/28S_fungal_sequences/28S_fungal_sequences"
+DB_58S="/home1/datawork/ltrouill/Ifremer/Data/DB/blast/blastdb/5_8S_sequences/5_8_rRNA_db"
 
 OUT_18S="$BLAST_FOLDER/${NAME}_vs_18S.txt"
 OUT_28S="$BLAST_FOLDER/${NAME}_vs_28S.txt"

@@ -12,7 +12,7 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/Final_transcriptome/TranscriptomeTrim_20250720_202820/FINAL_RNA/All_RNA.fasta"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/Final_transcriptome/Transcriptome_Karlodinium_20250805_142605/FINAL_RNA/All_RNA_95.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Karlodinium/Short_reads/fastp_20250414_121346"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
 FASTQ=False

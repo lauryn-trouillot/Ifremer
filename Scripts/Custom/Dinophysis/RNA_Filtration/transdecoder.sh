@@ -6,6 +6,7 @@
 CONSENSUS=$1
 TRANSDECODER_FOLDER=$2
 RNA_FOLDER=$3
+FILENAME=$(basename "$CONSENSUS")
 
 NC_LIST="$TRANSDECODER_FOLDER/ncRNA_name.txt"
 mRNA_LIST="$TRANSDECODER_FOLDER/mRNA_name.txt"
@@ -22,7 +23,7 @@ TransDecoder.Predict -t "$CONSENSUS" -O "$TRANSDECODER_FOLDER"
 echo "[$(date)] ORFs prédits par TransDecoder."
 
 # Liste des transcrits codants
-ORF_DIR="$TRANSDECODER_FOLDER/All_RNA.fasta.transdecoder_dir"
+ORF_DIR="$TRANSDECODER_FOLDER/${FILENAME}.transdecoder_dir"
 grep "^>" "$ORF_DIR/longest_orfs.cds" | cut -d' ' -f1 | sed 's/^>//;s/\.p[0-9]\+$//' | sort -u > "$mRNA_LIST"
 
 # Charger l’environnement SeqKit

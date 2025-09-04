@@ -1,5 +1,5 @@
 #!/bin/bash 
-#PBS -N THE_pipeline
+#PBS -N RNA_Filtration
 #PBS -q omp
 #PBS -l ncpus=8
 #PBS -l mem=100gb
@@ -10,32 +10,26 @@
 
 cd "$PBS_O_WORKDIR"
 
-# Définir les fichiers d'entrée
-TRANSCRIPTOME_1="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnaspades/rnaspades_20250418_145703/transcripts.fasta"
-TRANSCRIPTOME_2="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/rnabloom/rnabloom_20250717_180152/rnabloom.transcripts.fasta"
-NAME=Prymnesium
-
 # Créer un dossier de résultats
-RESULTS_FOLDER="/home1/scratch/ltrouill/TranscriptomeTrim_$(date +%Y%m%d_%H%M%S)"
+NAME=Nom_espece
+RESULTS_FOLDER="/home1/scratch/ltrouill/rnaFiltration_${NAME}_$(date +%Y%m%d_%H%M%S)"
 RNA_FOLDER="$RESULTS_FOLDER/FINAL_RNA"
-EVIGINE_FOLDER="$RESULTS_FOLDER/evigene"
 BLAST_FOLDER="$RESULTS_FOLDER/blast"
 TRANSDECODER_FOLDER="$RESULTS_FOLDER/transdecoder"
 TRNASCAN_FOLDER="$RESULTS_FOLDER/trnascan"
+CONSENSUS="Chemin/vers/transcriptome/"
+
 
 LOG_FILE="$RESULTS_FOLDER/TranscriptomeTrim.log"
 
-mkdir -p "$RESULTS_FOLDER" "$RNA_FOLDER" "$EVIGINE_FOLDER" "$BLAST_FOLDER" "$TRNASCAN_FOLDER" "$TRANSDECODER_FOLDER"
+mkdir -p "$RESULTS_FOLDER" "$RNA_FOLDER" "$BLAST_FOLDER" "$TRNASCAN_FOLDER" "$TRANSDECODER_FOLDER"
 
-cd /home1/datawork/ltrouill/Ifremer/Scripts/Prymnesium/Final_transcriptome
+cd Chemin/vers/scripts
 
-echo "[$(date)] Début de la pipeline - Transcriptome final et séparation selon les types d'ARN" > "$LOG_FILE"
+echo "[$(date)] Début de la pipeline - Séparation selon les types d'ARN" > "$LOG_FILE"
 
-echo "[$(date)] Etape 1 - Consensus des transcriptomes" >> "$LOG_FILE"
+echo "Espèce : A préciser " >> "$LOG_FILE"
 
-./evigene.sh "$NAME" "$TRANSCRIPTOME_1" "$TRANSCRIPTOME_2" "$EVIGINE_FOLDER" "$RNA_FOLDER" >> "$LOG_FILE"
-
-CONSENSUS="$RNA_FOLDER/All_RNA.fasta"
 
 if [ -e "$CONSENSUS" ] && [ ! -s "$CONSENSUS" ]; then
   echo "[ERROR] : Le fichier $CONSENSUS est vide" >> "$LOG_FILE"
@@ -47,7 +41,7 @@ else
   echo "Le fichier $CONSENSUS existe et n'est pas vide" >> "$LOG_FILE"
 fi
 
-cd /home1/datawork/ltrouill/Ifremer/Scripts/Prymnesium/Final_transcriptome
+cd Chemin/vers/scripts
 
 echo "[$(date)] Etape 2 - Détéction des ARN codant avec TransDecoder" >> "$LOG_FILE"
 
@@ -106,10 +100,9 @@ echo "[$(date)] Etape 4 - Statistiques des fichiers"
 
 . /appli/bioinfo/seqkit/2.9.0/env.sh
 
-seqkit stats -a "$RNA_FOLDER"/*.fa* --out-file "$RNA_FOLDER/${NAME}_summary.csv" --csv 
+cd "$RNA_FOLDER"
+
+seqkit stats -a *.fa* --out-file "$RNA_FOLDER/${NAME}_summary.csv" 
 
 echo "[$(date)] Fin de la pipeline" >> "$LOG_FILE"
-
-
-
 

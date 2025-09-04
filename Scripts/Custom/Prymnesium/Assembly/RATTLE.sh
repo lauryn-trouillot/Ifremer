@@ -23,8 +23,8 @@ RUN_STEP_2=false  # Passez à `true` pour activer l'étape 2
 VERBOSE="--verbose"
 
 # Chemins (à adapter)
-FILENAME="/home/datawork-lpba/Prymnesium/PrymneTranscripto/RNA-longReads-fev25/Galaxy43-[Prymnesium_cDNA Porechop OK Qualite Ok].fastq"
-LOG_FOLDER="/home1/datawork/ltrouill/ifremer/Prymnesium/Errors/RATTLE"
+FILENAME="/home/datawork-lpba/Prymnesium/PrymneTranscripto/TranscriptomeRef-Genalg/LongReadsRNA/CleanedData/Galaxy43_Prymnesium_cDNA_Porechop_Qualite.fastq"
+LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/RATTLE/"
 RESULT_FOLDER="/home1/scratch/ltrouill/RATTLE_${TIMESTAMP}"
 CLUSTERS_FOLDER="$RESULT_FOLDER/clusters"
 EX_CLUSTERS_FOLDER="$RESULT_FOLDER/Extract_clusters"

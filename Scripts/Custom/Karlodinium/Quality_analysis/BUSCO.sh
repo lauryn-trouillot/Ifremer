@@ -11,7 +11,7 @@ cd "${PBS_O_WORKDIR}"
 # Variables
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NAME="BUSCO_${TIMESTAMP}"
-SEQ_FILE="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/Final_transcriptome/TranscriptomeTrim_20250720_202820/FINAL_RNA/All_RNA.fasta"
+SEQ_FILE="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/Final_transcriptome/Transcriptome_Karlodinium_20250805_142605/FINAL_RNA/All_RNA_95.fasta"
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/BUSCO"
 RESULT_FOLDER="/home1/datawork/ltrouill/Ifremer/Results/Karlodinium/BUSCO/${NAME}"
 DB_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/busco_downloads/lineages/eukaryota_odb10" # A télécharger

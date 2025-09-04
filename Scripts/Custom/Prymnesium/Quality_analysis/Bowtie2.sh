@@ -12,10 +12,10 @@ cd "${PBS_O_WORKDIR}"
 ####################################
 LOG_FOLDER="/home1/datawork/ltrouill/Ifremer/Errors/Bowtie2"
 RESULT_FOLDER="/home1/scratch/ltrouill/bowtie2_alignment_$(date +%Y%m%d_%H%M%S)"
-FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/Final_transcriptome/TranscriptomeTrim_20250722_164349/FINAL_RNA/All_RNA.fasta"
+FILENAME="/home1/datawork/ltrouill/Ifremer/Results/Prymnesium/trinity/Trinity_20250819_113303.Trinity.fasta"
 READS_FOLDER="/home1/datawork/ltrouill/Ifremer/Data/Cleaned_data/Prymnesium/Short_reads/fastp_20250407_081434"
 LOGFILE="${LOG_FOLDER}/bowtie2_alignment_$(date +%Y%m%d_%H%M%S).log"
-FASTQ=False
+FASTQ=True
 
 BOWTIE2_THREADS=15
 BOWTIE2_OPTIONS="--no-unal -q"

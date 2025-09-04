@@ -1,15 +1,12 @@
 # Final_transcriptome
 
-Ce dossier contient les scripts pour l’assemblage et la filtration du transcriptome final de Lingulodinium.
+Ce dossier contient les scripts pour la filtration du transcriptome final de Lingulodinium.
 Pour chaque outil utilisé, un dossier et un fichier log sont créés.
 
 ## Rôle des scripts
 
 - **main.sh**  
   Script principal qui exécute l’ensemble de la pipeline : consensus, séparation codant/non codant, identification des ARNr et ARNt, statistiques.
-
-- **evigene.sh**  
-  Fusionne plusieurs transcriptomes en un consensus, puis linéarise le fichier FASTA final.
 
 - **transdecoder.sh**  
   Prédit les ARN codants (mRNA) et sépare les ARN non codants (ncRNA) à l’aide de TransDecoder.
@@ -24,7 +21,6 @@ Pour chaque outil utilisé, un dossier et un fichier log sont créés.
 
 Dans le dossier `FINAL_RNA`, on retrouve ces différents fichiers :
 
-- `All_RNA.fasta` : Transcriptome consensus.
 - `mRNA.fasta` : ARN messagers codants.
 - `ncRNA.fasta` : ARN non codants.
 - `rRNA.fasta` : ARN ribosomiques.
